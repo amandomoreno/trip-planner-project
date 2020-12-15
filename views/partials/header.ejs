@@ -37,6 +37,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <% if (user) { %>
+          <!-- THESE ARE ADMIN PERMISSIONS -->
+          <li class="nav-item">
+            <a class="nav-link" href="/destinations/new">Add Destination</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add Activity</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">All Destinations</a>
           </li>
@@ -46,12 +53,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Itenarary</a>
           </li>
-          <!-- THESE ARE ADMIN PERMISSIONS -->
           <li class="nav-item">
-            <a class="nav-link" href="/destinations/new">Add Destination</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add Activity</a>
+            <a class="nav-link" href="/users">User List</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/auth/logout">Log Out</a>
