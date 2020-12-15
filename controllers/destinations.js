@@ -27,15 +27,20 @@ function create(req, res){
     })
 }
 
-// function create(req, res) {
+// function create(req, res){
+//     const destination = new Destination(req.body.postedBy)
 //     req.body.postedBy = req.user.name
 //     req.body.avatar = req.user.avatar
-//     Message.create(req.body)
-//     .then(() => {
-//       res.redirect('/messages')
+//     destination.save(function(err){
+//         if (err){
+//         console.log(err)
+//         return res.redirect('/destinations/new')
+//         }
+//         console.log(destination)
+//         Destination.create(req.body)
+//         res.redirect(`/destinations/${destination._id}`)
 //     })
-//   }
-
+// }
 
 // function index(req, res) {
 //     Message.find({})
