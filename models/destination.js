@@ -10,17 +10,4 @@ const destinationSchema = new Schema ({
   timestamps: true,
 })
 
-const userSchema = new Schema(
-  {
-    name: String,
-    email: String,
-    avatar: String,
-    googleId: String,
-    destinations: [destinationSchema]
-  },
-  {
-    timestamps: true,
-  }
-);
-
-module.exports = mongoose.model("Destination", userSchema);
+module.exports = mongoose.model("Destination", destinationSchema);
