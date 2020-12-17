@@ -2,7 +2,8 @@ const Destination = require('../models/destination')
 
 module.exports = {
     new: newDestination,
-    create
+    create,
+    index
 }
 
 function newDestination(req, res) {
@@ -44,3 +45,14 @@ function create(req, res){
 //       })
 //     })
 //   }
+
+function index(req, res){
+    Destination.find({}, function(err, destinations){
+        res.render('destinations/index', { 
+            title: "All Destinations", 
+            user: req.user,
+            destinations
+        })
+    })
+}
+

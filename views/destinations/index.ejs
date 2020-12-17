@@ -1,21 +1,18 @@
 <%- include('../partials/header') %>
-<table id="list">
-  <thead>
-    <tr>
-      <th>Popular Destinations</th>
-      <th>Special Offers</th>
-      <th></th>
-    </tr>
-  </thead>
+
+<h1><%= title %></h1>
+
+<table>
   <tbody>
-    <% destinations.forEach(function(d) { %>
+    <% destinations.forEach(function(d){ %>
       <tr>
-        <td><%= d.title %></td>
-        <td><%= d.releaseYear %></td>
-        <td><a href="/movies/<%= d._id %>">DETAILS</a></td>
+        <label>Destination Details:</label>
+        <td><%= d.place %></td>
+        <label>Description:</label>
+        <td><%= d.description %></td>
       </tr>
-      <% }); %>
-    </tbody>
-  </table>
-  
+    <% }) %> 
+  </tbody>
+</table>
+
 <%- include('../partials/footer') %>
