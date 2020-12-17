@@ -4,7 +4,8 @@ module.exports = {
     new: newDestination,
     create,
     index,
-    show
+    show,
+    update
 }
 
 function newDestination(req, res) {
@@ -64,5 +65,11 @@ function show(req, res){
             user: req.user,
             destination
         })
+    })
+}
+
+function update(req, res){
+    Destination.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, destination){
+        res.redirect('/destinations')
     })
 }

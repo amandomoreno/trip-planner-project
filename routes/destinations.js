@@ -7,6 +7,7 @@ router.get('/new', isLoggedIn, destinationsCtrl.new)
 router.post('/', isLoggedIn, destinationsCtrl.create)
 router.get('/', isLoggedIn, destinationsCtrl.index)
 router.get('/:id', isLoggedIn, destinationsCtrl.show)
+router.put('/:id', isLoggedIn, destinationsCtrl.update)
 
 
 
