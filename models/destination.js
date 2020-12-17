@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const destinationSchema = new Schema ({
-  place: {type: String, enum: ['Grand Bahamas, BS', 'Las Vegas', 'Liberia, CR', 'Ocho Rios, JA', ]},
+  place: {type: String, required: true, unique: true},
   description: {type: String, required: true},
   //activities
   //reviews

@@ -1,13 +1,8 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/destinations" method="POST">
-    <label>Destination:</label>
-    <select name="place">
-      <option value="BS">Grand Bahamas, BS</option>
-      <option value="CR">Liberia, CR</option>
-      <option value="LV">Las Vegas</option>
-      <option value="JA">Ocho Rios, JA</option>
-    </select>
+  <label>Destination:</label>
+  <input type="text" name="place">  
   <label>Description:</label>
   <input type="text" name="description">
   <input type="submit" value="Add Destination"><br><br>

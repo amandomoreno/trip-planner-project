@@ -12,21 +12,6 @@ function newDestination(req, res) {
         err: ''})
 } 
 
-function create(req, res){
-    const destination = new Destination(req.body.postedBy)
-    req.body.postedBy = req.user.name
-    req.body.avatar = req.user.avatar
-    destination.save(function(err){
-        if (err){
-        console.log(err)
-        return res.redirect('/destinations/new')
-        }
-        console.log(destination)
-        Destination.create(req.body)
-        res.redirect(`/destinations/${destination._id}`)
-    })
-}
-
 // function create(req, res){
 //     const destination = new Destination(req.body.postedBy)
 //     req.body.postedBy = req.user.name
@@ -38,9 +23,16 @@ function create(req, res){
 //         }
 //         console.log(destination)
 //         Destination.create(req.body)
-//         res.redirect(`/destinations/${destination._id}`)
+//         res.redirect('/destinations/new')
 //     })
 // }
+
+function create(req, res){
+    Destination.create(req.body, function(err, destination){
+        console.log(destination)
+        res.redirect('/destinations/new')
+    })
+}
 
 // function index(req, res) {
 //     Message.find({})
