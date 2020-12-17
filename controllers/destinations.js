@@ -3,7 +3,8 @@ const Destination = require('../models/destination')
 module.exports = {
     new: newDestination,
     create,
-    index
+    index,
+    show
 }
 
 function newDestination(req, res) {
@@ -56,3 +57,12 @@ function index(req, res){
     })
 }
 
+function show(req, res){
+    Destination.findById(req.params.id, function(err, destination) {
+        res.render('destinations/show', {
+            title: 'Destination Detail', 
+            user: req.user,
+            destination
+        })
+    })
+}

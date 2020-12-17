@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+<form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
+    <label>Destination:</label>
+    <input type="text" name="place" value="<%= destination.place %>">
+    <label>Description:</label>
+    <input type="text" name="description" value="<%= destination.description %>">
+    <button type="submit">Update Destination</button>
+</form>
+  <!-- start activities list -->
+  
+  <!-- end activities list -->
+</section>
+<!-- add to activities form below this comment -->
+
+<!-- reviews section here -->
+
+
+<%- include('../partials/footer') %>

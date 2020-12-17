@@ -6,6 +6,8 @@ const destinationsCtrl = require('../controllers/destinations')
 router.get('/new', isLoggedIn, destinationsCtrl.new)
 router.post('/', isLoggedIn, destinationsCtrl.create)
 router.get('/', isLoggedIn, destinationsCtrl.index)
+router.get('/:id', isLoggedIn, destinationsCtrl.show)
+
 
 
 function isLoggedIn(req, res, next) {
