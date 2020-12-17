@@ -11,6 +11,9 @@
         <label>Description:</label>
         <td><%= d.description %></td>
         <td><a href="/destinations/<%= d._id %>">DETAILS</a></td>
+        <form action="/destinations/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">Delete</button>
+        </form>
       </tr>
     <% }) %> 
   </tbody>
