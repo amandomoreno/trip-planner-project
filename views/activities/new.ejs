@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<p>Please first ensure that the Activity is not in the dropdown
+    <select>
+      <% activities.forEach(function(a) { %>
+        <option><%= a.name %></option>
+      <% }) %>
+    </select>
+</p>
+
+<form id="add-destination-form" action="/activities" method="POST">
+  <label>Activity:</label>
+  <input type="text" name="name">
+  <input type="submit" value="Add Activity">
+</form>
+
+
+<%- include('../partials/footer') %>
