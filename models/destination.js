@@ -13,7 +13,7 @@ const destinationSchema = new Schema ({
   place: {type: String, required: true, unique: true},
   description: {type: String, required: true},
   activities: [{type: Schema.Types.ObjectId, ref: 'Activity'}],
-  review: [reviewSchema]
+  reviews: [reviewSchema]
 },{
   timestamps: true,
 })
