@@ -9,6 +9,7 @@ router.get('/', isLoggedIn, destinationsCtrl.index)
 router.get('/:id', isLoggedIn, destinationsCtrl.show)
 router.put('/:id', isLoggedIn, destinationsCtrl.update)
 router.delete('/:id', isLoggedIn, destinationsCtrl.delete)
+router.post('/:id/activities', isLoggedIn, destinationsCtrl.addActivity)
 
 
 

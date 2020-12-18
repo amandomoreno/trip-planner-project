@@ -1,4 +1,5 @@
 const Destination = require('../models/destination')
+const Activity = require('../models/activity')
 
 module.exports = {
     new: newDestination,
@@ -6,7 +7,8 @@ module.exports = {
     index,
     show,
     update,
-    delete: deleteDestination
+    delete: deleteDestination,
+    addActivity
 }
 
 function newDestination(req, res) {
@@ -33,12 +35,27 @@ function index(req, res){
     })
 }
 
+// function show(req, res){
+//     Destination.findById(req.params.id, function(err, destination) {
+//         res.render('destinations/show', {
+//             title: 'Destination Detail', 
+//             user: req.user,
+//             destination
+//         })
+//     })
+// }
+
 function show(req, res){
-    Destination.findById(req.params.id, function(err, destination) {
-        res.render('destinations/show', {
-            title: 'Destination Detail', 
-            user: req.user,
-            destination
+    Destination.findById(req.params.id)
+    .populate('activities').exec(function(err, destination) {
+        Activity.find({_id: {$nin: destination.activities}}, function(err, activities) { 
+            console.log(destination)      
+            res.render('destinations/show', {
+                title: 'Destination Details', 
+                user: req.user, 
+                destination, 
+                activities
+            })
         })
     })
 }
@@ -52,5 +69,15 @@ function update(req, res){
 function deleteDestination(req, res){
     Destination.findByIdAndDelete(req.params.id, function(err){
         res.redirect('/destinations')
+    })
+}
+
+function addActivity(req, res){
+    console.log(req.body.activityId, 'activityId')
+    Destination.findById(req.params.id, function(err, destination){
+        destination.activities.push(req.body.activityId)
+        destination.save(function(err){
+            res.redirect(`/destinations/${destination._id}`)
+        })
     })
 }

@@ -8,12 +8,25 @@
     <input type="text" name="description" value="<%= destination.description %>">
     <button type="submit">Update Destination</button>
 </form>
-  <!-- start activities list -->
-  
-  <!-- end activities list -->
 </section>
+<!-- start activities list -->
+<!-- display activities here -->
+<div>Activities:</div>
+<ul>
+  <%- destination.activities.map(d => 
+    `<li>${d.name}</li>`
+  ).join('') %>
+</ul>  
+<!-- end activities list -->
 <!-- add to activities form below this comment -->
-
+<form action="/destinations/<%= destination._id %>/activities" method="POST">
+    <select name="activityId">
+      <%- activities.map(a => 
+        `<option value="${a._id}">${a.name}</option>`
+      ).join('') %>
+    </select>
+    <button type="submit">Add to Destinations</button>
+  </form>
 <!-- reviews section here -->
 
 
