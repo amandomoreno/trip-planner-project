@@ -4,6 +4,8 @@
 <form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
     <label>Destination:</label>
     <input type="text" name="place" value="<%= destination.place %>">
+    <!-- <label>Image:</label>
+    <input type="image"> -->
     <label>Description:</label>
     <input type="text" name="description" value="<%= destination.description %>">
     <button type="submit">Update Destination</button>
