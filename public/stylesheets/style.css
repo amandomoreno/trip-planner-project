@@ -68,6 +68,12 @@ nav > a.active {
   color: white;
 }
 
+.mb-3{
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 #new-form {
   display: grid;
   grid-gap: 10px;
