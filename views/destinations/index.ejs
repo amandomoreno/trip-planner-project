@@ -6,19 +6,27 @@
   <tbody>
     <% destinations.forEach(function(d){ %>
       <tr>
-        <label>Destination Details:</label>
+        <label>Destination:</label>
         <td><%= d.place %></td>
         <label>Description:</label>
         <td><%= d.description %></td>
         <td><a href="/destinations/<%= d._id %>">DETAILS</a></td>
         <form action="/destinations/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
-        <button type="submit">Delete</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
         </form>
       </tr>
     <% }) %> 
   </tbody>
 </table>
 
+<!-- <div class="card mb-3">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div> -->
 
 
 <%- include('../partials/footer') %>
