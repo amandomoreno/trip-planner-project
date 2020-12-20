@@ -1,79 +1,81 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-<form action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
-    <label>Destination:</label>
-    <input type="text" name="place" value="<%= destination.place %>">
-    <!-- <label>Image:</label>
-    <input type="image"> -->
-    <label>Description:</label>
-    <input type="text" name="description" value="<%= destination.description %>">
-    <button type="submit">Update Destination</button>
+<form class="add-form" action="/destinations/<%= destination._id %>?_method=PUT" method="POST">
+    <div class="form-group">
+        <label>Destination:</label>
+        <input class="form-control" type="text" name="place" value="<%= destination.place %>"><br>
+        <!-- <label>Image:</label>
+        <input type="image"> -->
+        <label>Description:</label>
+        <input class="form-control" type="text" name="description" value="<%= destination.description %>">
+        <button class="btn btn-primary" type="submit">Update Destination</button>
+    </div>
 </form>
-</section>
 <!-- start activities list -->
-<!-- display activities here -->
-<div>Activities:</div>
-<ul>
-  <%- destination.activities.map(d => 
-    `<li>${d.name}</li>`
-  ).join('') %>
-</ul>  
-<!-- end activities list -->
-<!-- add to activities form below this comment -->
-<form action="/destinations/<%= destination._id %>/activities" method="POST">
-    <select name="activityId">
-      <%- activities.map(a => 
-        `<option value="${a._id}">${a.name}</option>`
-      ).join('') %>
-    </select>
-    <button type="submit">Add to Destinations</button>
-  </form>
+<form class="add-form" action="/destinations/<%= destination._id %>/activities" method="POST">
+    <div class="dropdown">
+        <!-- display activities here -->
+        <div>Activities:</div>
+        <ul>
+        <%- destination.activities.map(d => 
+            `<li>${d.name}</li>`
+        ).join('') %>
+        </ul>  
+        <!-- end activities list -->
+        <!-- add to activities form below this comment -->
+            <select class="btn btn-secondary dropdown-toggle" name="activityId">
+            <%- activities.map(a => 
+                `<option value="${a._id}">${a.name}</option>`
+            ).join('') %>
+            </select><br>
+            <button class="btn btn-primary" type="submit">Add to Destinations</button>
+    </div>
+</form>
 <!-- reviews section here -->
 <br><br>
-<h2>Reviews</h2>
 <form id="add-review-form" method="POST" action="/destinations/<%= destination._id %>/reviews">
-  <label>Review:</label>
-  <textarea name="content"></textarea>
-  <label>Rating:</label>
-  <select name="rating">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-  <input type="submit" value="Add Review">
+    <div class="form-group">
+    <label>Review:</label>
+    <input class="form-control" name="content"></input>
+    <label>Rating:</label>
+    <select class="form-control" name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <input class="btn btn-primary" type="submit" value="Add Review">
+    <!-- destination reviews here -->
+    <% if (destination.reviews.length) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Review</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let total = 0 %>
+                <% destination.reviews.forEach(function(d) { %>
+                    <% total += d.rating %>
+                    <tr>
+                        <td><%= d.createdAt.toLocaleDateString() %></td>
+                        <td><%= d.content %></td>
+                        <td><%= d.rating %></td>
+                    </tr>
+                    <% }); %>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td><strong><%= (total / destination.reviews.length).toFixed(1) %></strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <% } else { %>
+                <h5>No Reviews Yet</h5>
+                <% } %>
+    </div>            
 </form>
-
-<!-- destination reviews here -->
-<% if (destination.reviews.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Review</th>
-          <th>Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% let total = 0 %>
-        <% destination.reviews.forEach(function(d) { %>
-          <% total += d.rating %>
-          <tr>
-            <td><%= d.createdAt.toLocaleDateString() %></td>
-            <td><%= d.content %></td>
-            <td><%= d.rating %></td>
-          </tr>
-        <% }); %>
-        <tr>
-          <td colspan="2"></td>
-          <td><strong><%= (total / destination.reviews.length).toFixed(1) %></strong></td>
-        </tr>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h5>No Reviews Yet</h5>
-  <% } %>
 
 <%- include('../partials/footer') %>

@@ -35,7 +35,7 @@ body {
 }
 
 .nav-link {
-  padding-top: 15px;
+  padding-top: 30px;
 }
 
 body > main h1:first-child {
@@ -65,7 +65,7 @@ body > main h3:first-child {
   margin: 20px;
 }  */
 
-#add-form{
+.add-form{
   display: grid;
   justify-self: center;
   grid-gap: 10px;
@@ -78,6 +78,21 @@ body > main h3:first-child {
 
 #activity-p{
   margin: 100px auto 40px auto;
+}
+
+#add-review-form{
+  display: grid;
+  justify-self: center;
+  grid-gap: 10px;
+  margin: auto;
+  padding: 10px;
+  padding-top: 30px;
+  border-radius: 5px;
+  max-width: 35rem;
+}
+
+.btn-primary{
+  margin: 10px 10px 10px 0;
 }
 
 /* #new-form {

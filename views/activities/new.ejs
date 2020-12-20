@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
 
-<form id="add-form" action="/activities" method="POST">
-    <div class="dropdown"></div>
+<form class="add-form" action="/activities" method="POST">
+    <div class="dropdown">
         <p id="activity-p">Please first ensure that the activity is not in the dropdown
             <select class="btn btn-secondary dropdown-toggle">
             <% activities.forEach(function(a) { %>
@@ -11,7 +11,7 @@
             </select>
         </p>
     </div>
-    <div class="form-group"></div>
+    <div class="form-group">
         <label>Activity:</label>
         <input class="form-control" type="text" name="name">
         <input class="btn btn-primary" type="submit" value="Submit"  placeholder="Add Activity">
