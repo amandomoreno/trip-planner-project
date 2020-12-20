@@ -1,14 +1,24 @@
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/destinations" method="POST">
-  <label>Destination:</label>
-  <input type="text" name="place">  
-  <!-- <label>Image:</label>
-  <input type="text"> -->
-  <label>Description:</label>
-  <input type="text" name="description">
-  <input type="submit" value="Add Destination"><br><br>
-  <!-- add destinations and drop down here -->
+<form id="add-form" action="/destinations" method="POST">
+  <div class="form-group"></div>
+    <label>Destination:</label>
+    <input class="form-control" type="text" name="place"><br>  
+    <!-- <label>Image:</label>
+    <input type="text"> -->
+    <label>Description:</label>
+    <input class="form-control" type="text" name="description">
+    <input class="btn btn-primary" type="submit" value="Add Destination"><br><br>
+    <!-- add destinations and drop down here -->
+  </div> 
 </form>
+
+<!-- <form id="add-form" action="/activities" method="POST">
+  <div class="form-group"></div>
+      <label>Activity:</label>
+      <input class="form-control" type="text" name="name">
+      <input class="btn btn-primary" type="submit" value="Submit"  placeholder="Add Activity">
+  </div>    
+</form> -->
 
 <%- include('../partials/footer') %>
