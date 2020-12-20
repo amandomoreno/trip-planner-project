@@ -20,5 +20,10 @@ YouTrippin' is an app where you can browse for destinations, review destinations
 ### Technology: Node.JS, Express, EJS, Trello, Whimsical, LucidChart
 
 ### Icebox:
-- [ ] ...
-
+- [ ]Show activities on "All Destinations view" 
+- [ ]Show reviews on "All Destinations view" 
+- [ ]Add a photos section
+- [ ]Add a view for itenararies for logged-In users
+- [ ]Add option to add an image when adding destinations available to Admins
+- [ ]Updating destinations available to Admins
+- [ ]Adding an activity and appending to a destination available to Admins
