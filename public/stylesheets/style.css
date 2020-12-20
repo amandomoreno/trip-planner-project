@@ -8,10 +8,6 @@ a {
   color: #00b7ff;
 }
 
-#avatarPhoto {
-  border-radius: 50%;
-}
-
 body {
   margin: 0;
   height: 100vh;
@@ -19,17 +15,41 @@ body {
   grid-template-rows: 50px 1fr;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   grid-template-areas: 
-    "nav"
-    "main"
+  "nav"
+  "main"
 }
 
-body > nav {
-  grid-area: nav;
-  background-color: black;
+#avatarPhoto {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  align-items: right;
+  justify-content: right;
+  margin-left: auto;
+}
+
+/* body > nav{
+  grid-area: nav;
+  background-color: lightgray;
+  display: grid;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
   padding: 0 20px 0 30px;
+} */
+
+.navbar-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-content: right;
+  margin: 10px;
+  padding: 0 20px 0 30px;
+  margin-left: auto;
+}
+
+.nav-link {
+  padding-top: 15px;
 }
 
 body > main h1:first-child {
@@ -37,22 +57,6 @@ body > main h1:first-child {
   flex-direction: column;
   align-items: center;
   margin: 10px 0 40px 0;
-}
-
-nav > a {
-  margin: 20px;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-nav > a:hover {
-  color: white;
-  background-color: #424748;
-}
-
-nav > a.active {
-  color: white;
 }
 
 .mb-3{
