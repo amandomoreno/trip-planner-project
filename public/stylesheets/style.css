@@ -25,31 +25,18 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
 }
 
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-}
-
-body > main {
-  grid-area: main;
+body > main h1:first-child {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
-  padding: 20px;
-  overflow-y: scroll;
-}
-
-body > main h1:first-child {
-  margin-bottom: 50px;
+  margin: 10px 0 40px 0;
 }
 
 nav > a {
@@ -156,4 +143,14 @@ ul {
 
 li {
   font-weight: bold;
+}
+
+#details{
+  transform: translate(0, -1rem);
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.btn-danger{
+  margin-left: 1rem;
 }

@@ -5,7 +5,7 @@ const destinationsCtrl = require('../controllers/destinations')
 /* GET users listing. */
 router.get('/new', isLoggedIn, destinationsCtrl.new)
 router.post('/', isLoggedIn, destinationsCtrl.create)
-router.get('/', isLoggedIn, destinationsCtrl.index)
+router.get('/', destinationsCtrl.index)
 router.get('/:id', isLoggedIn, destinationsCtrl.show)
 router.put('/:id', isLoggedIn, destinationsCtrl.update)
 router.delete('/:id', isLoggedIn, destinationsCtrl.delete)
