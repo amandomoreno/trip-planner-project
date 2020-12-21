@@ -10,18 +10,19 @@ YouTrippin' is an app where you can browse for destinations, review destinations
 
 ### Here's the final result. Enjoy!
 
-![WorkingApp](Img here) 
-![Function](Img here) 
-![MobileApp](Img here)
-![Function](Img here) 
+![App Index view](https://i.imgur.com/O0dbbe1.png)
+![App New destination](https://i.imgur.com/TOf2O5U.png)
+![App New Activity](https://i.imgur.com/J0Er1c5.png)
+![App Show view](https://i.imgur.com/Y13GTcY.png)
 
-### Get Started: [Visit YouTrippin'](Url here)
+### Get Started: [Visit YouTrippin'](https://you-trippin.herokuapp.com/)
 
 ### Technology: Node.JS, Express, EJS, Trello, Whimsical, LucidChart
 
 ### Icebox:
 - [ ] Show activities on "All Destinations view" 
 - [ ] Show reviews on "All Destinations view" 
+- [ ] "Index view" to show a section for special offers and popular destinations 
 - [ ] Add a photos section
 - [ ] Add a view for itenararies for logged-In users
 - [ ] Add option to add an image when adding destinations available to Admins
