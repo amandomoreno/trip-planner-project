@@ -11,9 +11,13 @@ YouTrippin' is an app where you can browse for destinations, review destinations
 ### Here's the final result. Enjoy!
 
 ![App Index view](https://i.imgur.com/O0dbbe1.png)
+
 ![App New destination](https://i.imgur.com/TOf2O5U.png)
+
 ![App New Activity](https://i.imgur.com/J0Er1c5.png)
+
 ![App Show view](https://i.imgur.com/Y13GTcY.png)
+
 
 ### Get Started: [Visit YouTrippin'](https://you-trippin.herokuapp.com/)
 
