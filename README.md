@@ -19,9 +19,9 @@ YouTrippin' is an app where you can browse for destinations, review destinations
 ![App Show view](https://i.imgur.com/Y13GTcY.png)
 
 
-### Get Started: [Visit YouTrippin'](https://you-trippin.herokuapp.com/)
+### Get Started: [Visit YouTrippin' app](https://you-trippin.herokuapp.com/)
 
-### Technology: Node.JS, Express, EJS, Trello, Whimsical, LucidChart
+### Technology: Node.JS, ExpressJS, JavaScript, CSS, HTML, Trello, Whimsical, LucidChart
 
 ### Icebox:
 - [ ] Show activities on "All Destinations view" 
