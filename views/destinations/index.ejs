@@ -29,12 +29,16 @@
     <h6 class="card-title">Description</h6>
     <p class="card-text"><%= d.description %></p>
   </div>
+  <% if(user._id == d.createdBy) {%> 
   <form action="/destinations/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
     <button type="submit" class="btn btn-danger">Delete</button>
-  </form>
+  </form> 
+  <% } %> 
   <td><a id="details" href="/destinations/<%= d._id %>">Details</a></td>
 </div>
 <% }) %> 
+
+
 
 
 <%- include('../partials/footer') %>
