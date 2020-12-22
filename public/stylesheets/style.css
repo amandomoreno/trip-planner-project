@@ -190,3 +190,7 @@ li {
 .btn-danger{
   margin-left: 1rem;
 }
+
+body > main{
+  background-image: url("https://i.imgur.com/QKd2V5V.jpg");
+}
