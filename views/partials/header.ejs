@@ -36,11 +36,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+          <% if (user) { %>
+            <!-- THESE ARE ADMIN PERMISSIONS -->
           <li class="nav-item">
             <a class="nav-link" href="/destinations">All Destinations</a>
           </li>
-          <% if (user) { %>
-          <!-- THESE ARE ADMIN PERMISSIONS -->
           <li class="nav-item">
             <a class="nav-link" href="/destinations/new">Add Destination</a>
           </li>

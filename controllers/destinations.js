@@ -37,16 +37,6 @@ function index(req, res){
     })
 }
 
-// function show(req, res){
-//     Destination.findById(req.params.id, function(err, destination) {
-//         res.render('destinations/show', {
-//             title: 'Destination Detail', 
-//             user: req.user,
-//             destination
-//         })
-//     })
-// }
-
 function show(req, res){
     Destination.findById(req.params.id)
     .populate('activities').exec(function(err, destination) {
@@ -73,41 +63,6 @@ function deleteDestination(req, res){
             res.redirect('/destinations')
     })
 }
-
-// function deleteDestination(req, res){
-//         let idx = destination.indexOf(req.params.id)
-//         req.user.destination.splice(idx, 1)
-//         req.user.save().then(() =>{
-//             res.redirect('/destinations')
-//         })
-// }
-
-// function removeFromCollection(req, res) {
-//     Game.findOne({ slug: req.params.slug }).then((game) => {
-//       let idx = game.favoritedBy.indexOf(req.user._id);
-//       game.favoritedBy.splice(idx, 1);
-//       game.save().then(() => {
-//         res.redirect(`/games/${req.params.slug}`);
-//       });
-//     });
-//   }
-
-// function removeFromWatchList(req, res) {
-//     let idx = req.user.watchList.findIndex((g) => g.slug === req.params.slug);
-//     req.user.watchList.splice(idx, 1);
-//     req.user.save().then(() => {
-//       res.redirect(`/games/${req.body.slug}`);
-//     });
-//   }
-
-// function removeFriend(req, res) {
-//     let idx = req.user.friends.indexOf(req.params.id);
-//     req.user.friends.splice(idx, 1);
-//     req.user.save().then(() => {
-//       res.redirect(`/users/${req.params.id}`);
-//     });
-//   }
-
 
 function addActivity(req, res){
     console.log(req.body.activityId, 'activityId')

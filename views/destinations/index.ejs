@@ -2,25 +2,6 @@
 
 <h1><%= title %></h1>
 
-<!-- <table>
-  <tbody>
-    <% destinations.forEach(function(d){ %>
-      <tr>
-        <label>Destination:</label>
-        <td><%= d.place %></td>
-        <label>Description:</label>
-        <td><%= d.description %></td>
-        <td><a href="/destinations/<%= d._id %>">DETAILS</a></td>
-        <form action="/destinations/<%= d.id %>?_method=DELETE" class="delete-form" method="POST">
-        <button type="submit" class="btn btn-danger">Delete</button>
-        </form>
-      </tr>
-    <% }) %> 
-  </tbody>
-</table> -->
-
-
-
 <% destinations.forEach(function(d){ %>
 <div class="card mb-3">
   <!-- <img src="..." class="card-img-top" alt="..."> -->
