@@ -1,7 +1,38 @@
 <%- include('partials/header') %>
 
-
-<h1>Hello, <%= user ? user.name : "Welcome to your favorite trip planner." %></h1>
-
+<div id="intro-homepg">
+    <div id="welcome-message">
+        <h1>Hello, <%= user ? user.name : "Welcome to your favorite trip planner." %></h1>
+    </div>
+    <div id="description-message"> 
+        <h3>YouTrippin' is an app where you can look up popular destinations and activities, along with bookings and itenararies.</h3>
+    </div>
+    <div id="vector-images">
+        <div class="vectors">
+            <img
+            width="100"
+            class="vectorsPic"
+            src="/images/plane.png"
+            alt=""
+            />
+        </div>
+        <div class="vectors">
+            <img
+            width="100"
+            class="vectorsPic"
+            src="/images/calendar.png"
+            alt=""
+            />
+        </div>
+        <div class="vectors">
+            <img
+            width="100"
+            class="vectorsPic"
+            src="/images/kayaking.png"
+            alt=""
+            />
+        </div>
+    </div>
+    </div>
 
 <%- include('partials/footer') %>

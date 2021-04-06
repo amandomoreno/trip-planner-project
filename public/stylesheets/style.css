@@ -194,3 +194,38 @@ li {
 body > main{
   background-image: url("https://i.imgur.com/QKd2V5V.jpg");
 }
+
+#intro-homepg {
+  display: grid;
+  justify-self: center;
+  margin: 100px;
+  margin-top: 150px;
+}
+
+#welcome-message {
+  margin: 10px;
+}
+
+#description-message {
+  margin: 10px 75px 10px 75px;
+  display: grid;
+}
+
+#description-message > h3 {
+  font-size: 16px;
+}
+
+#vector-images {
+  display: flex;
+  justify-self: center;
+}
+
+.vectors {
+  margin: 0 20px 0 20px;
+  padding: 10px;
+}
+
+.vectorsPic {
+  margin: 0 50px 0 50px;
+  opacity: .5;
+}
