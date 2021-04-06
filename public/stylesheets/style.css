@@ -38,6 +38,10 @@ body {
   padding-top: 30px;
 }
 
+#Login {
+  margin-bottom: 20px;
+}
+
 body > main h1:first-child {
   display: flex;
   flex-direction: column;
@@ -192,7 +196,8 @@ li {
 }
 
 body > main{
-  background-image: url("https://i.imgur.com/QKd2V5V.jpg");
+  background-image: url("https://i.imgur.com/yVWJEVB.jpg");
+  height: 1200px;
 }
 
 #intro-homepg {
