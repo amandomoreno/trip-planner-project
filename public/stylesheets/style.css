@@ -43,13 +43,13 @@ body {
   margin-bottom: 20px;
 }
 
-body > main h1:first-child {
+#destinations-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-self: center;
   justify-self: center;
-  margin: 10px 0 40px 0;
+  margin: 100px 0 100px 0;
 }
 
 body > main h3:first-child {
@@ -58,6 +58,11 @@ body > main h3:first-child {
   align-items: center;
   margin: 10px 0 40px 0;
 }
+
+/* .card {
+  display: flex;
+  flex-direction: column;
+} */
 
 .mb-3{
   margin: 20px;
