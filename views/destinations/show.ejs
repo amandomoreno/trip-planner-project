@@ -28,9 +28,10 @@
                 `<option value="${a._id}">${a.name}</option>`
             ).join('') %>
             </select><br>
-            <button class="btn btn-primary" type="submit">Add to Destinations</button>
+            <button class="btn btn-primary" type="submit">Add Activity</button>
     </div>
 </form>
+
 <!-- reviews section here -->
 <br><br>
 <form class="add-form" id="add-review-form" method="POST" action="/destinations/<%= destination._id %>/reviews">
