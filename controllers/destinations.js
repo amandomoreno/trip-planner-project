@@ -37,6 +37,24 @@ function index(req, res){
     })
 }
 
+// function show(req, res) {
+//   Movie.findById(req.params.id)
+//   .populate('cast').exec(function(err, movie) {
+//     Performer.find({_id: {$nin: movie.cast}}, function(err, performers) {
+//       res.render('movies/show', {title: 'Movie Detail', movie, performers})
+//     })
+//   })
+// }
+
+// function create(req, res) {
+//   Movie.findById(req.params.id, function(err, movie) {
+//     movie.reviews.push(req.body)
+//     movie.save(function(err) {
+//       res.redirect(`/movies/${movie._id}`)
+//     })
+//   })
+// }
+
 function show(req, res){
     Destination.findById(req.params.id)
     .populate('activities').exec(function(err, destination) {
