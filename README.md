@@ -2,8 +2,10 @@
 
 YouTrippin' is an app where you can browse for destinations, review destinations, and book a stay.
 
+### Get Started: [Visit YouTrippin' app](https://you-trippin.herokuapp.com/)
 
-#### A quick look into my idea: 
+
+### A quick look into my idea: 
 [Trello Board](https://trello.com/b/8G19LVq6/youtrippin) 
 ![Trello Board Img](https://i.imgur.com/Iz8WbS7.png)   
 
@@ -18,8 +20,6 @@ YouTrippin' is an app where you can browse for destinations, review destinations
 
 ![App Show view](https://i.imgur.com/Y13GTcY.png)
 
-
-### Get Started: [Visit YouTrippin' app](https://you-trippin.herokuapp.com/)
 
 ### Technology: Node.JS, ExpressJS, JavaScript, CSS, HTML, Trello, Whimsical, LucidChart, Bootstrap, Postman, GitHub, MongoDB, Mongoose.
 
